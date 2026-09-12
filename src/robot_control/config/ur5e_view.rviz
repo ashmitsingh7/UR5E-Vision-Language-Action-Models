@@ -1,0 +1,147 @@
+# RViz Configuration File
+# UR5e Robot Configuration for GPU Manipulation Project
+#
+# This file saves the RViz configuration for visualizing the UR5e robot
+# with MoveIt 2 motion planning.
+
+Visualization Manager:
+  Class: ""
+  Displays:
+  - Class: rviz_display_context/Context
+    Name: ""
+    Enabled: true
+  - Class: rviz_default_plugins/Displays
+    Name: ""
+    Enabled: true
+    Displays:
+    - Class: rviz_default_plugins/RobotModel
+      Name: RobotModel
+      Enabled: true
+      Robot Description: robot_description
+      TF Prefix: ""
+      Update Interval: 0
+      Value: true
+      Visual Enabled: true
+      Collision Enabled: true
+      Visual Enabled: true
+      Collision Enabled: true
+    - Class: rviz_default_plugins/TF
+      Name: TF
+      Enabled: true
+      Frame Timeout: 15
+      Frame String: world
+      Show Arrows: true
+      Show Axes: true
+      Show Names: true
+      Marker Topics: []
+    - Class: rviz_default_plugins/Marker
+      Name: TF
+      Enabled: false
+    - Class: rviz_default_plugins/Marker
+      Name: TargetPose
+      Enabled: true
+      Topic Name: target_pose
+      Queue Size: 10
+      Marker Type: 2
+      Scale:
+        X: 0.1
+        Y: 0.1
+        Z: 0.1
+      Color:
+        R: 1.0
+        G: 0.0
+        B: 0.0
+        A: 1.0
+      Text Scale: 1
+      Text Color:
+        R: 1.0
+        G: 1.0
+        B: 1.0
+        A: 1.0
+      Outline:
+        X: 0
+        Y: 0
+        Z: 0
+      Outline Color:
+        R: 0.0
+        G: 0.0
+        B: 0.0
+        A: 1.0
+      Arrow Diameter: 0.1
+      Arrow Head Diameter: 0.2
+      Shaft Diameter: 0.1
+      Shaft Length: 1
+      Custom: false
+    - Class: rviz_default_plugins/Planning
+      Name: MotionPlanning
+      Enabled: true
+      Planner Plugin: ompl_interface/OMPLPlanner
+      Planning Adapter: default_planner_request_adapters/AddTimeOptimalParameterization default_planner_request_adapters/FixWorkspaceBounds default_planner_request_adapters/FixStartStateBounds default_planner_request_adapters/FixStartStateCollision default_planner_request_adapters/FixStartStatePathConstraints
+      Planning Scene Topic: planning_scene
+      Query Topic: compute_cartesian_path
+      Pose Topic: 
+      Pose String: 
+      Allow Approximate IK Solutions: false
+      Pose Tool Topic:
+      Pose Tool String: 
+      Planning Attempts: 10
+      Planning Time: 5.0
+      Max Velocity Scaling Factor: 0.0
+      Max Acceleration Scaling Factor: 0.0
+      Pose:
+        Position:
+          X: 0.0
+          Y: 0.0
+          Z: 0.0
+        Orientation:
+          X: 0.0
+          Y: 0.0
+          Z: 0.0
+          W: 1.0
+    - Class: rviz_default_plugins/PlanningScene
+      Name: PlanningScene
+      Enabled: true
+      Robot Model:
+        Links: []
+        Collision Objects: []
+        Attached Collision Objects: []
+      Scene Topic: planning_scene
+      Robot Description: robot_description
+      Robot Description SDF: robot_description_semantic
+      State Interest:
+        ALL: true
+        Modulo: 1
+        Show Debug: false
+    - Class: rviz_default_plugins/Goal
+      Name: Goal
+      Enabled: false
+  - Class: rviz_default_plugins/Help
+    Name: Help
+    Enabled: true
+  - Class: rviz_default_plugins/Status
+    Name: Status
+    Enabled: true
+  - Class: rviz_default_plugins/Tool Properties
+    Name: Tool Properties
+    Enabled: true
+  - Class: rviz_default_plugins/Views
+    Name: Views
+    Enabled: true
+    Current: 0
+    [0]:
+      Class: rviz_default_plugins/Orbit
+      Name: Current View
+      Enabled: true
+      Focal Point:
+        X: 0.0
+        Y: 0.0
+        Z: 0.0
+      Distance: 2
+      Pitch: 0.6084059381484985
+      Yaw: 0.7853981633974483
+      Fixed Frame: world
+  - Class: rviz_default_plugins/Selection
+    Name: Selection
+    Enabled: true
+    Selected: []
+
