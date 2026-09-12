@@ -1,0 +1,17 @@
+# Directories
+build/
+install/
+log/
+__pycache__/
+.vscode/
+
+# Files
+*.pyc
+*.pyo
+*.pyd
+*.log
+*.tmp
+*.temp
+*.swp
+.DS_Thumbs.db
+ur5e_ws/
