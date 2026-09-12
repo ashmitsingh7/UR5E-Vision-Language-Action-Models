@@ -7,8 +7,6 @@ Publishes a target end-effector pose for motion planning.
 import rclpy
 from rclpy.node import Node
 from geometry_msgs.msg import PoseStamped
-import yaml
-import os
 
 
 class TargetPosePublisher(Node):
@@ -22,10 +20,10 @@ class TargetPosePublisher(Node):
         self.declare_parameter('frame_id', 'world')
         
         # Get parameters
-        target_position = self.get_parameter('target_position').get_parameter_value().double_array_val
-        target_orientation = self.get_parameter('target_orientation').get_parameter_value().double_array_val
-        publish_rate = self.get_parameter('publish_rate').get_parameter_value().double_value
-        frame_id = self.get_parameter('frame_id').get_parameter_value().string_val
+        target_position = self.get_parameter('target_position').value
+        target_orientation = self.get_parameter('target_orientation').value
+        publish_rate = self.get_parameter('publish_rate').value
+        frame_id = self.get_parameter('frame_id').value
         
         # Create publisher
         self.publisher_ = self.create_publisher(PoseStamped, 'target_pose', 10)

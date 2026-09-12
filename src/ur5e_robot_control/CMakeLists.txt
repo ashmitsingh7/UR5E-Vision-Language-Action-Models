@@ -26,8 +26,6 @@ install(DIRECTORY config
 
 # Install scripts
 install(PROGRAMS
-  scripts/target_pose_publisher.py
-  scripts/trajectory_executor.py
   scripts/verify_tf_tree.sh
   DESTINATION lib/${PROJECT_NAME}
 )
